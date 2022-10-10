@@ -25,8 +25,8 @@ export function CountdownProvider({ children }: CountdownProviderProps){
     const [isActive, setIsActive] = useState(false)
     const [hasFinished, setHasFinished] = useState(false)
 
-    const minutes = Math.floor(time / 06) //faz a variavel minuto usando variavel time divido por 60(segundos que da 1min), em seguida arredondando-a pra baixo (Math.floor), ou seja: caso time = 24:47(min:seg) o resultado seria 24.
-    const seconds = time % 06 //O sinal de % retorna o resto de um valor, ou seja, nesse caso o resto da variavel time será sempre os segundos.
+    const minutes = Math.floor(time / 60) //faz a variavel minuto usando variavel time divido por 60(segundos que da 1min), em seguida arredondando-a pra baixo (Math.floor), ou seja: caso time = 24:47(min:seg) o resultado seria 24.
+    const seconds = time % 60 //O sinal de % retorna o resto de um valor, ou seja, nesse caso o resto da variavel time será sempre os segundos.
 
     function startCountDown(){
         setIsActive(true);
